@@ -6,6 +6,12 @@ Instrucțiuni:
 - Respectă exact formatele de output.
 - Fă commit după ce rulezi corect.
 
+Checklist general:
+
+- Condițiile folosesc strict `boolean`; nu există „truthy/falsy”.
+- Pune acolade chiar și pentru ramuri scurte pentru claritate.
+- Testează fiecare ramură logică (inclusiv cazul „default” la `switch`).
+
 ---
 
 ## 11) Exercitiul11_StatusCard
@@ -31,6 +37,10 @@ Rezultat: Activ
 ```
 
 Commit: `feat: add exercitiul 11 - status card (if/else)`
+
+Observații:
+
+- Verifică mai întâi condiția de „activ și zile>0”. Dacă alternezi ordinea, păstrează logica echivalentă.
 
 ---
 
@@ -59,6 +69,10 @@ Nivel: Gold
 
 Commit: `feat: add exercitiul 12 - nivel card (if/elseif)`
 
+Sfaturi:
+
+- Fii atent la intervalele incluse/excluse; nu suprapune intervalele.
+
 ---
 
 ## 13) Exercitiul13_TipCardSwitch
@@ -86,6 +100,10 @@ Beneficiu: late checkout
 
 Commit: `feat: add exercitiul 13 - tip card (switch)`
 
+Pitfall:
+
+- Uitarea `break` duce la „fall-through” și mesaje duble; adaugă `break` la fiecare `case`.
+
 ---
 
 ## 14) Exercitiul14_AcumularePuncte
@@ -111,6 +129,10 @@ Total: 84
 
 Commit: `feat: add exercitiul 14 - acumulare puncte (for)`
 
+Clarificare:
+
+- Inițializează suma la 0 înainte de buclă și adaugă în fiecare iterație `puncteZilnice`.
+
 ---
 
 ## 15) Exercitiul15_CautareCard
@@ -133,3 +155,7 @@ Primul activ la index: 2
 ```
 
 Commit: `feat: add exercitiul 15 - cautare card (while)`
+
+Tips:
+
+- Când ai găsit primul `true`, oprește căutarea cu `break` pentru eficiență.

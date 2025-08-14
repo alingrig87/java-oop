@@ -5,6 +5,12 @@ Instrucțiuni:
 - Un fișier `.java` per exercițiu, o clasă publică și `main` pentru demonstrație.
 - Respectă exact numele câmpurilor, constructorilor și formatul de output.
 
+Cum validezi soluția (general):
+
+- Rularea trebuie să producă EXACT textele cerute (spații/emoji incluse).
+- Folosește nume de variabile/câmpuri/metode identice cu cerința.
+- Pentru fiecare exercițiu, testează și cu alte valori pentru a te asigura că logica nu e „hard-codată”.
+
 ---
 
 ## 21) Exercitiul21_ClasaCardHarry
@@ -26,6 +32,15 @@ Card2 -> <nume> | <casa> | <puncte>p
 
 Commit: `feat: add exercitiul 21 - clasa CardHarry (fields si obiecte)`
 
+De ce acest exercițiu:
+
+- Înțelegi diferența dintre tipuri primitive și tipuri de referință (obiecte) și vezi cum se instanțiază cu `new`.
+
+Greșeli frecvente:
+
+- A uita să folosești `new` la creare -> variabila rămâne `null` și apare `NullPointerException` la acces.
+- A confunda numele câmpurilor (ex.: `house` în loc de `casa`). Respectă exact cerința.
+
 ---
 
 ## 22) Exercitiul22_Constructor
@@ -39,6 +54,11 @@ Cerințe:
 - Afișează EXACT: `Ron | Gryffindor | 90p`
 
 Commit: `feat: add exercitiul 22 - constructor CardHarry`
+
+Explicații:
+
+- Constructorul îți permite să creezi obiecte într-o singură linie, garantând că toate câmpurile sunt setate de la început.
+- Dacă adaugi un constructor cu parametri, constructorul fără argumente implicit NU mai este generat.
 
 ---
 
@@ -55,6 +75,11 @@ Cerințe:
 - Afișează: `Hermione | Gryffindor | 120p`
 
 Commit: `feat: add exercitiul 23 - metode operatii`
+
+Capcane:
+
+- Nu seta `puncte` direct în `main` pentru a simula operațiile; logica de modificare trebuie să fie în metodele clasei.
+- Evită valori magice: transmite parametrul `p` din `main`, nu scrie `puncte += 20;` direct în metodă.
 
 ---
 
@@ -76,6 +101,11 @@ Cerințe:
 
 Commit: `feat: add exercitiul 24 - metoda afisare`
 
+Tips & Tricks:
+
+- Poți folosi `System.out.println("👤 Nume: " + nume);` etc. pentru lizibilitate.
+- Dacă vrei reutilizare, extrage formatarea într-o metodă `toString()` și apelează `System.out.println(toString());` în `afisare()`.
+
 ---
 
 ## 25) Exercitiul25_ColecțieObiecte
@@ -88,3 +118,8 @@ Cerințe:
 - Parcurge cu `for` și printează pentru fiecare: `<nume> - <puncte>p` (o linie per obiect).
 
 Commit: `feat: add exercitiul 25 - colectie carduri (array + for)`
+
+De ce e util:
+
+- Vezi cum se folosesc colecțiile de obiecte și cum se accesează câmpurile fiecărei instanțe într-o buclă.
+- Atenție la `NullPointerException`: asigură-te că fiecare element din array e instanțiat prin constructor înainte de a-l folosi.

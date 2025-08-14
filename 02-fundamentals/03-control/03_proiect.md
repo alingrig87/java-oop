@@ -2,6 +2,10 @@
 
 Obiectiv: Creează un meniu textual care permite utilizatorului să aleagă opțiuni și simulează acumularea de puncte pe zile. Folosește `if/else`, `switch`, `for/while` și `break/continue` într-un singur program.
 
+De ce acest proiect:
+
+- Integrezi toate structurile de control într-un flux coerent: meniu, selecții, simulări repetitive și condiții pe starea curentă.
+
 Cerințe:
 
 1. Fișier/clasă `Proiectel_Control_MeniuCafea` cu `main`.
@@ -33,3 +37,16 @@ La revedere!
 
 - `git add Proiectel_Control_MeniuCafea.java`
 - `git commit -m "feat: add proiectel control - meniu interactiv cafenea"`
+
+Pași recomandați:
+
+1. Creează fișierul/clasa cu `main` și definește variabilele inițiale.
+2. Simulează input-ul prin schimbarea manuală a variabilei `optiune` și rulează programul de mai multe ori, acoperind toate opțiunile.
+3. Pentru opțiunea 2, implementează o buclă `for` cu 7 iterații și adună `10` puncte/zi.
+4. Pentru opțiunea 3, verifică pragul cu un `if` și afișează mesajul corespunzător.
+5. Asigură-te că fiecare ramură afișează mesaje clare, pe linii separate.
+
+Teste recomandate:
+
+- `tipCard=standard` și `vip` pentru a verifica mesajele `switch`.
+- `puncte=0` și `puncte>=50` pentru bonus.

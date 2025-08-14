@@ -2,6 +2,10 @@
 
 Obiectiv: Creează un program care tipărește o chitanță textuală pentru un card de fidelitate la un bar de smoothie, folosind DOAR variabile și operații de concatenare/aritmetică simplă (fără condiții, fără bucle, fără metode auxiliare).
 
+De ce acest proiect:
+
+- Te disciplinează să modelezi date simple cu variabile corecte (`String`, `int`, `double`) și să formatezi output-ul clar.
+
 Cerințe:
 
 1. Fișier/clasă `Proiectel_Variabile_Smoothie` cu `main`.
@@ -34,3 +38,22 @@ Mulțumim și poftă bună!
 
 - `git add Proiectel_Variabile_Smoothie.java`
 - `git commit -m "feat: add proiectel variabile - chitanta smoothie bar"`
+
+Pași recomandați:
+
+1. Creează fișierul/clasa cu `main`.
+2. Declară variabilele în ordinea din cerință, cu valori de test.
+3. Calculează subtotalul, punctele și valoarea punctelor exact în variabile separate (nu face calcule direct în `println`).
+4. Folosește `System.out.printf` pentru sume la 2 zecimale (mai lizibil și precis pentru chitanțe).
+5. Afișează liniile EXACT ca în exemplu; verifică alinierea vizuală.
+
+Verificări:
+
+- Subtotalul să reflecte cantitate x preț pentru fiecare produs.
+- Punctele sunt întregi (casting explicit la `int`).
+- Formatul liniilor respectă spațiile dintre elemente.
+
+Greșeli frecvente:
+
+- Să uiți conversia la `int` pentru puncte — rezultă puncte cu zecimale.
+- Să amesteci `+` pentru concatenare cu `+` pentru adunare; încadrează calculele între paranteze.

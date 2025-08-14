@@ -6,6 +6,11 @@ Instrucțiuni generale:
 - Respectă exact numele variabilelor și formatul de output.
 - Fă commit după ce rulezi corect.
 
+Checklist general:
+
+- Folosește tipurile potrivite pentru fiecare operație (ex.: `double` când e nevoie de zecimale).
+- Testează cu date-limită (puncte 99/100/101) pentru a valida condițiile.
+
 ---
 
 ## 6) Exercitiul06_CalculPuncteCafea
@@ -37,6 +42,10 @@ Output exact:
 
 Commit: `feat: add exercitiul 06 - calcul puncte cafenea (aritmetici si +=)`
 
+Explicația operațiilor:
+
+- `+=` actualizează variabila la fața locului; evită duplicarea variabilelor temporare.
+
 ---
 
 ## 7) Exercitiul07_ComparareCarduri
@@ -64,6 +73,10 @@ Card cu mai multe puncte: Card Netflix
 
 Commit: `feat: add exercitiul 07 - comparare carduri (>, ==)`
 
+Pitfall:
+
+- Nu compara `String` cu `==` pentru egalitate de conținut; aici comparăm doar int-urile. Pentru `String`, folosește `equals`.
+
 ---
 
 ## 8) Exercitiul08_ValidariCard
@@ -87,6 +100,10 @@ Activ: true, Email confirmat: false, Puncte: 95/100
 ```
 
 Commit: `feat: add exercitiul 08 - validari card (&& si >=)`
+
+De ce short-circuit:
+
+- Dacă `cardActiv` este `false`, expresia se oprește și nu evaluează `puncte >= pragBonus`, ceea ce poate evita calcule inutile.
 
 ---
 
@@ -113,6 +130,10 @@ Dupa procesare -> Nivel: 4, XP: 965
 ```
 
 Commit: `feat: add exercitiul 09 - upgrade nivel (++/--, atribuire compusa)`
+
+Verifică:
+
+- Pentru datele din cerință NU se atinge pragul și `nivel` rămâne 4; ajustează datele și testează și cazul în care se face upgrade.
 
 ---
 
@@ -142,3 +163,7 @@ Bonus baza: 50, Bonus tip: 20
 ```
 
 Commit: `feat: add exercitiul 10 - bonus combinat (mix + ternar)`
+
+Clarificare:
+
+- Folosește `"cinema".equals(tipCard)` pentru a evita `NullPointerException` dacă `tipCard` ar fi `null`.

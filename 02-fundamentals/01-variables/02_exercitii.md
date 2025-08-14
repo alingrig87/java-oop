@@ -6,6 +6,12 @@ Instrucțiuni generale:
 - Respectă numele variabilelor și formatul de output cerut.
 - După ce rulezi cu succes, fă commit.
 
+Cum validezi:
+
+- Output-ul TREBUIE să fie exact, inclusiv spații/emoji.
+- Verifică tipurile potrivite: întregi pentru cantități, `double` pentru prețuri.
+- Rulează de 2 ori cu alte valori pentru a evita hardcoding-ul.
+
 ---
 
 ## 1) Exercitiul01_CardHarryPotter
@@ -35,6 +41,11 @@ Status: Activ
 - `git add Exercitiul01_CardHarryPotter.java`
 - `git commit -m "feat: add exercitiul 01 - card Hogwarts (String + print)"`
 
+Explicație și scop:
+
+- Exersezi declararea de variabile `String` și concatenarea în `System.out.println`.
+- Vezi diferența dintre text literal și valori din variabile.
+
 ---
 
 ## 2) Exercitiul02_CardMarvel
@@ -58,6 +69,10 @@ Vârsta: 48
 ```
 
 4. Commit: `feat: add exercitiul 02 - card Marvel (int)`
+
+Greșeli frecvente:
+
+- Folosirea ghilimelelor la valori numerice (`"85"` în loc de `85`). Nu o face; `int` nu folosește ghilimele.
 
 ---
 
@@ -84,6 +99,10 @@ Cost total: 16.42 $/lună
 
 5. Commit: `feat: add exercitiul 03 - card Netflix (double)`
 
+Tips:
+
+- Pentru 2 zecimale, `System.out.printf("%.2f", costTotal);` este preferabil concatenării.
+
 ---
 
 ## 4) Exercitiul04_CardHotel
@@ -107,6 +126,10 @@ Nopți rămase: 0
 ```
 
 4. Commit: `feat: add exercitiul 04 - card hotel (boolean)`
+
+Explicație:
+
+- `boolean` poate fi doar `true` sau `false`. Nu există „yes/no”. Transformă manual în textul dorit la afișare.
 
 ---
 
@@ -133,3 +156,7 @@ Premium: true
 ```
 
 4. Commit: `feat: add exercitiul 05 - card gaming (mix tipuri)`
+
+Pitfall:
+
+- Amestecarea tipurilor în calcule poate duce la conversii implicite. Când ai nevoie de fracții, asigură-te că folosești `double` (nu doar `int`).

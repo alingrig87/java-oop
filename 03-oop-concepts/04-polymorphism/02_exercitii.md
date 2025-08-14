@@ -5,6 +5,12 @@ Instrucțiuni:
 - Fiecare exercițiu include un `main` de demonstrație.
 - Respectă numele claselor/metodelor și output-urile cerute.
 
+Checklist general:
+
+- Polimorfismul se vede când folosești tipul părinte (clasă abstractă/interfață) pentru variabile/colecții.
+- `@Override` pe metodele suprascrise în subclase îți validează semnătura.
+- Pentru interfețe, clasele trebuie să implementeze TOATE metodele declarate.
+
 ---
 
 ## 36) Exercitiul36_ClasaAbstracta
@@ -23,6 +29,10 @@ Card Cinema
 ```
 
 Commit: `feat: add exercitiul 36 - clasa abstracta Card`
+
+De ce abstract:
+
+- Clasa de bază definește „ce”, iar subclasele definesc „cum”. Nu poți instanția clasa abstractă direct.
 
 ---
 
@@ -43,6 +53,10 @@ Card Hotel
 
 Commit: `feat: add exercitiul 37 - polimorfism simplu (array baza)`
 
+Observație:
+
+- Iterezi peste `Card[]` și se apelează implementarea corectă a lui `afisare()` la runtime (dispatch dinamic).
+
 ---
 
 ## 38) Exercitiul38_InterfaceRecompensa
@@ -62,6 +76,10 @@ VIP: 24
 
 Commit: `feat: add exercitiul 38 - interfata Recompensabil (2 implementari)`
 
+Tips:
+
+- Interfața definește doar contractul; logica efectivă e în clasele care „implements”.
+
 ---
 
 ## 39) Exercitiul39_CastingSigur
@@ -79,6 +97,10 @@ Trailer...
 ```
 
 Commit: `feat: add exercitiul 39 - instanceof + downcast`
+
+Pitfall:
+
+- Downcasting fără `instanceof` poate arunca `ClassCastException`. Verifică înainte.
 
 ---
 
@@ -99,3 +121,7 @@ Card Retail
 ```
 
 Commit: `feat: add exercitiul 40 - dispatch dinamic (override)`
+
+Clarificare:
+
+- În array-ul de tip părinte, apelul `afisare()` execută varianta din clasa concretă a fiecărui element.

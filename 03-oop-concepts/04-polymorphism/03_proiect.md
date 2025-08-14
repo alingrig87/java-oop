@@ -2,6 +2,10 @@
 
 Obiectiv: Calculează bonusuri pentru carduri diferite folosind o interfață comună și dispatch dinamic.
 
+De ce acest proiect:
+
+- Arată puterea polimorfismului: un singur cod (procesator) operează pe tipuri diferite prin același contract.
+
 Cerințe:
 
 1. Interfață `Recompensabil { int calculeazaBonus(int puncte); }`.
@@ -18,7 +22,20 @@ Cerințe:
 Total bonus: 74
 ```
 
-(Ex.: cinema=20, hotel=24, retail=30) 5. Commit:
+(Ex.: cinema=20, hotel=24, retail=30)
+
+5. Commit:
 
 - `git add Proiectel_Polimorfism_Procesator.java`
 - `git commit -m "feat: add proiectel polimorfism - procesator recompense"`
+
+Pași recomandați:
+
+1. Definește interfața `Recompensabil`.
+2. Implementează cele 3 tipuri concrete conform regulilor bonus.
+3. Scrie `ProcesatorBonus.totalBonus` care parcurge array-ul și însumează rezultatele apelând `calculeazaBonus` pe fiecare element.
+4. În `main`, creează array-ul, apelează metoda și afișează formatul EXACT.
+
+Teste recomandate:
+
+- `puncte` sub și peste pragurile folosite de implementări pentru a vedea variația rezultatului.

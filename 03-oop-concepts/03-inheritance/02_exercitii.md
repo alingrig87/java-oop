@@ -5,6 +5,12 @@ Instrucțiuni:
 - Fiecare exercițiu poate fi în fișier separat; include un `main` de demonstrație.
 - Respectă numele claselor/metodelor și output-urile.
 
+Checklist general:
+
+- Folosește `extends` corect și apelează `super(...)` când este nevoie (constructori).
+- Acces la câmpuri: `protected` pentru uz în subclase, `private` pentru încapsulare strictă.
+- Adaugă `@Override` pentru metode suprascrise – te ajută să detectezi greșeli de semnătură.
+
 ---
 
 ## 31) Exercitiul31_BazaCard
@@ -22,6 +28,10 @@ Puncte: 30
 ```
 
 Commit: `feat: add exercitiul 31 - baza CardFidelitate`
+
+De ce:
+
+- Creezi un punct comun pentru comportamente partajate (adauga/scade); subclasele moștenesc această logică.
 
 ---
 
@@ -42,6 +52,10 @@ Cerințe:
 
 Commit: `feat: add exercitiul 32 - CardCinema derivat`
 
+Observație:
+
+- Câmpul `puncte` este accesibil direct în subclasă fiind `protected`; alternativ poți oferi getter/setter în bază.
+
 ---
 
 ## 33) Exercitiul33_OverrideAfisare
@@ -61,6 +75,10 @@ card cinema: <cinema>
 
 Commit: `feat: add exercitiul 33 - override afisare/descriere`
 
+Explicație:
+
+- Suprascrierea permite fiecărei subclase să aibă comportament specific păstrând aceeași interfață publică.
+
 ---
 
 ## 34) Exercitiul34_SuperConstructor
@@ -74,6 +92,10 @@ Cerințe:
 - În `main`, creează `new CardCinema("IMAX", 200)` și printează `Puncte: 200`.
 
 Commit: `feat: add exercitiul 34 - super constructor`
+
+Pitfall:
+
+- Dacă baza nu are constructor fără argumente, e obligatoriu să chemi `super(puncte)` în primul rând din constructorul copilului.
 
 ---
 
@@ -94,3 +116,7 @@ Cerințe:
 - În `main`, creează câte un obiect din fiecare, setează puncte și afișează toate.
 
 Commit: `feat: add exercitiul 35 - ierarhie carduri (cinema/hotel/retail)`
+
+Tips:
+
+- Ține metodele comune în bază. Specificul (hotel/cinema/retail) doar în subclase.
